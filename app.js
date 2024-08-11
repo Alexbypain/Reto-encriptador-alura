@@ -1,3 +1,8 @@
+
+
+
+
+
 /*const copiarContenido = async (texto) => {
     try {
       await navigator.clipboard.writeText(texto);
@@ -25,7 +30,7 @@ function encriptar() {
     miDiv.innerHTML='';
     const nuevoDiv = document.createElement('div');
     nuevoDiv.classList.add('nuevo-div');  // Añadimos una clase al nuevo div
-
+    nuevoDiv.setAttribute('contenteditable', 'true');
 
     let textToWrite = texto.value;
     let mayusculas='ABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóú'
@@ -70,11 +75,24 @@ function encriptar() {
 
     nuevoBoton.textContent = 'Copiar';
 
+    nuevoBoton.appendChild(nuevoDiv);
     miDiv.appendChild(nuevoDiv);
     miDiv.appendChild(nuevoBoton);
 
 
     nuevoBoton.addEventListener('click', () => copiarContenido(nuevoDiv.textContent));
+
+    const boton = document.getElementById('botonAumentar');
+    const contenedor = document.getElementById('area__ejecucion');
+
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        contenedor.style.height = '24.85507%'; // Nueva altura
+    } 
+
+
+
+   
 
     
  
