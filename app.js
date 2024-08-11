@@ -1,8 +1,6 @@
 
 
 
-
-
 /*const copiarContenido = async (texto) => {
     try {
       await navigator.clipboard.writeText(texto);
@@ -85,11 +83,16 @@ function encriptar() {
     const boton = document.getElementById('botonAumentar');
     const contenedor = document.getElementById('area__ejecucion');
 
+    const cuerpo = document.getElementById('body');
+        
 
     if (window.matchMedia('(max-width: 768px)').matches) {
-        contenedor.style.height = '24.85507%'; // Nueva altura
-    } 
+        contenedor.style.height = '24.85507%'; // Nueva altura7
+        
 
+    } 
+    
+   
 
 
    
